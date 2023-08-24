@@ -24,7 +24,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 # Get the directory of the Dockerfile
-dockerfile_dir = os.path.dirname(os.path.abspath(__file__))
+dockerfile_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Route to serve the index.html file
 @app.get("/")
