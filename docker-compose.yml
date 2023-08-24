@@ -1,7 +1,7 @@
 version: "3.9"
 services:
  useritem-api-service:
-  image: mtheys/python-api2-test
+  image: mtheys/api-herex:latest
   ports:
     - "8000:8000"
   volumes:
