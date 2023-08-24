@@ -4,6 +4,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 
 
@@ -22,10 +23,12 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+# Get the directory of the Dockerfile
 dockerfile_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Route to serve the index.html file
 @app.get("/")
-async def read_index():
+def get_index():
     index_path = os.path.join(dockerfile_dir, "index.html")
     return FileResponse(index_path)
 
