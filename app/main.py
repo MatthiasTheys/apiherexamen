@@ -25,7 +25,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 # Load the content of the index.html file
-index_html_path = "../../index.html"
+index_html_path = "index.html"
 with open(index_html_path, "r") as f:
     index_html_content = f.read()
 
