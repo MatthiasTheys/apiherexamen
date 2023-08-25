@@ -23,14 +23,10 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Get the directory of the Dockerfile
-dockerfile_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Make it so that the index.html file is served from the root of the server
+app.mount("/", StaticFiles(directory="../", html=True), name="index.html")
 
-# Route to serve the index.html file
-@app.get("/")
-def get_index():
-    index_path = os.path.join(dockerfile_dir, "index.html")
-    return FileResponse(index_path)
+
 
 # Dependency
 def get_db():
