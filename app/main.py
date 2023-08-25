@@ -3,7 +3,8 @@ from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
+from fastapi.responses import HTMLResponse
+from pathlib import Path
 from fastapi.staticfiles import StaticFiles
 
 
@@ -23,10 +24,15 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Make it so that the index.html file is served from the root of the server
-app.mount("/", StaticFiles(directory="../", html=True), name="static")
+# Load the content of the index.html file
+index_html_path = "../index.html"
+with open(index_html_path, "r") as f:
+    index_html_content = f.read()
 
-
+# Define a route to serve the index.html content as the root page
+@app.get("/", response_class=HTMLResponse)
+async def get_index():
+    return index_html_content
 
 # Dependency
 def get_db():
