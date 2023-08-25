@@ -30,4 +30,41 @@ Ik heb ook gebruik gemaakt van Postman om mijn API te testen. Ik heb hier een co
 ![postman](images/postman2.png)
 ### Create owner
 ![postman](images/postman3.png)
+### Get owner by id
+![postman](images/postman4.png)
+### Create car for owner
+![postman](images/postman5.png)
+### Read all cars
+![postman](images/postman6.png)
+### Update car by id
+![postman](images/postman7.png)
+### Delete car by id
+![postman](images/postman8.png)
+
+## Swagger
+Ik heb ook gebruik gemaakt van Swagger UI om mijn API te testen. Ik heb hier een collectie gemaakt met alle endpoints die ik heb gemaakt. Hieronder zie je een paar screenshots van de Swagger UI.
+
+### Swagger UI
+![swagger](images/swagger1.png)
+### Authorization stap voor stap
+![swagger](images/swagger2.png)
+![swagger](images/swagger3.png)
+### Get owners and cars authenticated
+![swagger](images/swagger4.png)
+### Create owner
+![swagger](images/swagger5.png)
+### Get owner by id
+![swagger](images/swagger6.png)
+### Create car for owner
+![swagger](images/swagger7.png)
+![swagger](images/swagger7.1.png)
+### Read all cars
+![swagger](images/swagger8.png)
+### Update car by id
+![swagger](images/swagger9.png)
+![swagger](images/swagger9.1.png)
+### Delete car by id
+![swagger](images/swagger10.png)
+
+
 
