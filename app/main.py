@@ -24,7 +24,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 # Make it so that the index.html file is served from the root of the server
-app.mount("/", StaticFiles(directory="../", html=True), name="index.html")
+app.mount("/", StaticFiles(directory="../", html=True), name="static")
 
 
 
