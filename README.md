@@ -9,3 +9,9 @@
 
 ## Inleiding
 Ik heb gebruikt gemaakt van FastAPI om een API te maken over auto's en hun eigenaars. De API is gemaakt met Python en de data wordt opgeslagen in een SQLite database. De API is te benaderen via de browser, Postman en Swagger. De bedoeling hiervan is dat mensen die een garage delen kunnen zien welke eigenaar bij welke auto hoort.
+
+## Frontend
+De bedoeling was om een volledige frontend te bouwen rond alle endpoints voor mijn api ik heb enkel een login endpoint kunnen realiseren in de frontend. Ik heb wel mijn best gedaan om deze er zo goed mogelijk uit te laten zien.
+
+this is an image of the login page
+![login](images/frontendlogin1.png)
